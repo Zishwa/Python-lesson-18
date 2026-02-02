@@ -1,16 +1,6 @@
-import random
-playing= True
-no=str(random.randint(1,5))
-print("Guess a number between 1 and 5")
-print("The game is over when you guess the correct number")
-
-while playing:
-    guess=input("Enter your guess: ")
-    if guess==no:
-        print("Congratulations! You guessed the correct number.")
-        break
-    else:
-        print("Wrong guess. Try again!")   
-
-   
- 
+from datetime import datetime,date,time
+I= date.today()
+print("Todays date is: ", I)
+print("Date components are: ", str(I.day)+"-"+str(I.month)+"-"+str(I.year))
+now= datetime.now()
+print("Current date and time is: ", now)

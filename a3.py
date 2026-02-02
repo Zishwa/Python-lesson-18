@@ -1,8 +1,12 @@
-import math
-x=10.56
-print("Ceiling value of",x,"is",math.ceil(x))
-print("Floor value of",x,"is",math.floor(x))
+import random
+import time
 
-y=12
-print("Copy sign of",y,"is",math.copysign(y,-1))
-print("GCD of 48 and 18 is",math.gcd(48,18))
+def getrandomdate(s,e):
+    randomgenerator = random.random()
+    dateformat="%d/%m/%Y"
+    sdate=time.mktime(time.strptime(s,dateformat))
+    edate=time.mktime(time.strptime(e,dateformat))
+    randomtime=sdate + randomgenerator * (edate - sdate)
+    randomdate=time.strftime(dateformat,time.localtime(randomtime))
+    return randomdate
+print("Random date :",getrandomdate("01/01/2025","01/12/2026"))
